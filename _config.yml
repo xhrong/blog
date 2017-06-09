@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 森.林木
 subtitle:
 description:
-author: John Doe
-language:
+author: xhrong
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: http://xhrong.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -21,6 +21,7 @@ permalink_defaults:
 source_dir: source
 public_dir: public
 tag_dir: tags
+rss_dir: rss
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
@@ -34,7 +35,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -43,6 +44,7 @@ highlight:
   auto_detect: false
   tab_replace:
 
+  
 # Category & Tag
 default_category: uncategorized
 category_map:
@@ -63,9 +65,71 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: themes/next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: ssh://git@github.com/xhrong/xhrong.github.io
+  branch: master
+
+
+# 分页配置
+# ---------------下面选项需要对应插件的支持---------------
+# npm install hexo-generator-index --save
+# npm install hexo-generator-archive --save
+# npm install hexo-generator-category --save
+# npm install hexo-generator-tag --save
+## Set per_page to 0 to disable pagination
+#每页显示的文章量 
+#per_page: 20
+#首页的分页设置
+index_generator:
+  per_page: 1
+#归档页的分页设置
+archive_generator:
+  per_page: 30
+  yearly: true
+  monthly: true
+#标签页的分页设置
+tag_generator:
+  per_page: 20
+
+#分页路径，在public中可以看到
+#pagination_dir: page
+
+
+# Extensions 拓展插件配置
+## Plugins: https://hexo.io/plugins/
+plugins: 
+
+
+# 配置RSS
+feed: 
+  #feed 类型 (atom/rss2)
+  type: atom   
+  #rss 路径
+  path: atom.xml  
+  #在 rss 中最多生成的文章数(0显示所有)
+  limit: 0
+
+  
+rss: /atom.xml
+
+baidusitemap: 
+  path: baidusitemap.xml
+
+sitemap: 
+  path: sitemap.xml
+
+
+
+
+# 自定义站点内容搜索
+# 需要先安装插件：
+# npm install hexo-generator-search --save
+search:
+  path: search.xml
+  # 如只想索引文章，可设置为post
+  field: all 
