@@ -3,6 +3,7 @@ title: Dagger2 in Action
 tags: [Android, Dagger2, DI]
 grammar_cjkRuby: true
 categories: [Android]
+date: 2017-03-09
 ---
 
 ### Dagger2是什么
