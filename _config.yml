@@ -71,7 +71,7 @@ theme: themes/next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:xhrong/xhrong.github.io.git
+  repo: https://github.com/xhrong/xhrong.github.io.git
   branch: master
 
 
