@@ -22,6 +22,10 @@ date: 2019-10-05
 该方案是前3种方案的C层化，本质是一样的
 
 
+[demo](http://xhrong.github.io/attachments/AndroidScreenTransportDemo.rar)
+
+
+
 ```java
 package com.encode.androidencode;
 
