@@ -31,7 +31,6 @@ Android 10 已引入 AudioPlaybackCapture API。应用可以借助此 API 复制
  - 调用 AudioPlaybackCaptureConfiguration.Builder.build() 以构建 AudioPlaybackCaptureConfiguration。
  - 通过调用 setAudioPlaybackCaptureConfig 将配置传递到 AudioRecord。
  
- 
  **按音频内容限制捕获**
 
  应用可以使用以下方法限制其可以捕获的音频：
