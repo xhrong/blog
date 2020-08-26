@@ -76,7 +76,6 @@ Android 10 已引入 AudioPlaybackCapture API。应用可以借助此 API 复制
 下表总结了清单属性和有效政策的效果：
 
  allowAudioPlaybackCapture  ALLOW_CAPTURE_BY_ALL  ALLOW_CAPTURE_BY_SYSTEM  ALLOW_CAPTURE_BY_NONE 
- -------------------------  --------------------  -----------------------  --------------------- 
  true                       任何应用              仅系统                     无捕获                
  false                      仅系统                仅系统                     无捕获                     
 
