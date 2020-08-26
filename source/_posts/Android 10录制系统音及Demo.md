@@ -11,11 +11,13 @@ date: 2020-08-20
 http://xhrong.github.io/attachments/AudioPlaybackDemo.7z
 
 ### 捕获播放的音频
+
 Android 10 已引入 AudioPlaybackCapture API。应用可以借助此 API 复制其他应用正在播放的音频。此功能类似于屏幕采集，但采集对象是音频。主要用例是视频在线播放应用，这些应用希望捕获游戏正在播放的音频。
 
 *请注意，对于其音频正在被捕获的应用，Capture API 不会影响该应用的延迟时间。*
 
 #### 构建捕获应用
+
 **先决条件**
 为确保安全性和隐私，“捕获播放的音频”功能会施加一些限制。为了能够捕获音频，应用必须满足以下要求：
 
@@ -42,6 +44,7 @@ Android 10 已引入 AudioPlaybackCapture API。应用可以借助此 API 复制
 *请注意，您不能同时使用 addMatchingUsage() 和 excludeUsage() 方法。您必须选用其中一个。同样地，您也不能同时使用 addMatchingUid() 和 excludeUid()。*
 
 #### 允许捕获播放的音频
+
 您可以配置应用以防止其他应用捕获其音频。只有当应用满足以下要求时，才可以捕获来自该应用的音频：
 
 **用法**
