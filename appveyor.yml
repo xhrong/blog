@@ -3,6 +3,8 @@ clone_depth: 5
 environment:
   access_token:
     secure: k2MPSx/zKk/CONwjZyUCpaVD7t391L3KgJblA9Wj6Sx4o884IRwyNhZVFpqZi8IC
+  matrix:
+    - nodejs_version: Stable
 
 install:
   - node --version
