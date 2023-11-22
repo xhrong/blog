@@ -31,7 +31,7 @@ scrcpy就是通过adb调试的方式来将手机屏幕投到电脑上，并可�
 
 下载地址：https://github.com/Genymobile/scrcpy
 
-[Uploading scrcpy-win64-v2.1.1.zip…]()
+http://xhrong.github.io/attachments/scrcpy-win64-v2.1.1.zip
 
 使用方法：
 - 方法一，使用USB连接：
