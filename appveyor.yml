@@ -2,7 +2,7 @@ clone_depth: 5
 
 environment:
   access_token:
-    secure: ESF8dJeJQ+SqbxPt9Ku+ULjYKbcLZNnqWSry8OwojPS81IwVSwWkeIIpqD/sKytR
+    secure: QlRaNAPLL6HSElsjSNyyQPOD9u4YmHdyYLUOg4/OZEEh89w3/1wd0dcbJgq4EO5I
 
 install:
   - ps: Install-Product node 12.16 # 默认node版本太老
