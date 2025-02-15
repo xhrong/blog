@@ -1,3 +1,12 @@
+---
+title: Advanced Guide to Python3 Programming(Second_Edition)笔记
+tags: [Python]
+grammar_cjkRuby: true
+categories: [Python]
+date: 2025-02-15
+---
+
+# 《Advanced Guide to Python3 Programming(Second_Edition)》笔记
 
 ### Python Type Hints
 Type Hint is additional type information that can be used with a function definition to indicate what types parameters should be and what type is returned. 
