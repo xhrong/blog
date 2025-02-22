@@ -14,7 +14,7 @@ date: 2026-2-9
  
    📅 2025-02-22 | 🏷️ LLM  
 
-   [<img src="http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.jpg" alt="封面图片" style="height:200px;" />](http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.pdf)
+   [<img src="http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.jpg" alt="封面图片" style="height:300px;" />](http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.pdf)
 
    ▶️ 简介：What you will learn
 
@@ -32,7 +32,7 @@ date: 2026-2-9
 
    📅 2025-02-22 | 🏷️ LLM  
 
-   [<img src="http://xhrong.github.io/attachments/books/大模型基础（完整版）.jpg" alt="封面图片" style="height:200px;" />](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
+   [<img src="http://xhrong.github.io/attachments/books/大模型基础（完整版）.jpg" alt="封面图片" style="height:300px;" />](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
 
    ▶️ 简介：大模型基础知识介绍，中文
 
@@ -44,7 +44,7 @@ date: 2026-2-9
 
    📅 2025-02-22 | 🏷️ 教学设计  
 
-   [<img src="http://xhrong.github.io/attachments/books/Design-For-How-People-Learn.jpg" alt="封面图片" style="height:200px;" />](http://xhrong.github.io/attachments/books/Design-For-How-People-Learn.pdf)
+   [<img src="http://xhrong.github.io/attachments/books/Design-For-How-People-Learn.jpg" alt="封面图片" style="height:300px;" />](http://xhrong.github.io/attachments/books/Design-For-How-People-Learn.pdf)
 
    ▶️ 简介：本书围绕学习设计的多个关键方面展开探讨，旨在帮助读者理解学习过程中的各种因素，并掌握设计高效学习体验的方法，对教育工作者、培训师以及学习设计师等具有重要的参考价值。
 
