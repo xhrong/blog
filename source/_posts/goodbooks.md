@@ -14,7 +14,7 @@ date: 2026-2-9
  
    📅 2024-03-15 | 🏷️ LLM  
 
-   [<img src="http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.png" alt="封面图片" height="50" />](http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.pdf)
+   [<img src="../attachments/books/llm-engineers-handbook-engineering-production.png" alt="封面图片" style="height:200px;" />](http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.pdf)
 
    ▶️ 简介：XXX
 
