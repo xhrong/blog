@@ -12,7 +12,8 @@ date: 2025-02-15
 Type Hint is additional type information that can be used with a function definition to indicate what types parameters should be and what type is returned. 
 This is illustrated below: 
 
-```
+
+``` python
 def add(x: int, y: int) -> int:
     return x + y
 
@@ -26,7 +27,8 @@ However, static analysis tools (such as **MyPy**) can be applied to the code to 
 
 解决方案：使用__slots__
 
-```
+
+``` python
 class Person: 
     __slots__ = ['name', 'age'] 
     def __init__(self, name, age): 
@@ -53,7 +55,8 @@ __slots__会减小类实例大小，有利于提升性能
 
 2、weakref.proxy 获取的弱引用对象是原对象的代理，可直接像原对象一样调用各成员；weakref.ref 获取的弱引用对象，需要额外解一层，其它一致
 
-```
+
+``` python
 class Data: 
     def __init__(self, value): 
         self.value = value 
@@ -71,7 +74,8 @@ print(proxy_object.out())
 
 ### Data Classes
 数据类是为了方便快捷定义实体类的语法糖
-```
+
+``` python
 from dataclasses import dataclass 
 @dataclass 
 class Trade: 
@@ -86,7 +90,8 @@ class Trade:
 
 1、初始化问题:可变类型成员的初始化，不能使用普通的语法，需要使用工厂方法，否则会导致所有实例的该成员变量，实际指向一个对象。（因为成员是在类加载的时候初始化的，而默认的__init__没有对成员变量再次显式初始化）
 
-```
+
+``` python
 from dataclasses import dataclass, field
 
 @dataclass
@@ -103,8 +108,29 @@ class Trade:
 3、为了对数据类增加日志监控，同时避免增加方法成员破坏数据类的简洁，额外引入__post_init__成员，该成员在__init__之后执行
 
 
+### Singleton Metaclass
+
+``` python
+class SingletonMetaclass(type):
+    _instances = {}
+
+    def __call__(cls, *args, **kwargs):
+        print('In SingletonMetaclass.__call__')
+        if cls not in cls._instances:
+            print(f'Creating new instance of {cls}')
+            cls._instances[cls] = super().__call__(*args, **kwargs)
+        print('Returning instance')
+        return cls._instances[cls]
 
 
+
+
+class Session(metaclass=SingletonMetaclass):
+    def __init__(self):
+        print('In Session initialiser')
+```
+
+_instances中维护了所有使用SingletonMetaclass当metaclass的类的实例。这些实例会一直存在。这是单例模式的特点。
 
 
 
