@@ -135,6 +135,123 @@ _instances中维护了所有使用SingletonMetaclass当metaclass的类的实例�
 
 
 
+### Threading vs Multprocessing
+
+在 Python 中，threading和multiprocessing模块都用于实现并发编程，但它们有着不同的实现方式和适用场景，下面详细介绍它们的异同点。
+
+**相同点**
+
+- 目标相同：threading和multiprocessing的主要目标都是为了提高程序的执行效率，通过并发执行任务来充分利用计算机的资源，尤其在处理多个独立任务时，能显著减少整体执行时间。
+- 使用方式类似：两者在使用上有相似的编程接口。
+
+**不同点**
+- 执行单元
+
+    threading：threading模块基于线程实现并发。线程是轻量级的执行单元，它们共享同一进程的内存空间。这意味着线程之间可以方便地共享数据，通过全局变量或类的成员变量就能实现数据的共享和通信。
+multiprocessing：multiprocessing模块基于进程实现并发。每个进程都有自己独立的内存空间，不同进程之间的数据是相互隔离的。这保证了数据的安全性，但也增加了进程间通信（IPC）的复杂度。
+
+- 资源开销
+
+    threading：线程的创建和销毁开销相对较小，因为它们共享进程的资源，不需要额外分配大量的系统资源。同时，线程之间的切换速度也比较快，因此在处理一些轻量级任务时，使用线程可以更高效地利用系统资源。
+multiprocessing：进程的创建和销毁开销较大，因为每个进程都需要独立的内存空间和系统资源。进程之间的切换也需要更多的系统开销。因此，在创建大量进程时，会消耗较多的系统资源。
+
+- 全局解释器锁（GIL）影响
+
+    threading：由于 Python 的全局解释器锁（GIL）的存在，同一时刻只有一个线程可以执行 Python 字节码。这意味着在 CPU 密集型任务中，多线程并不能充分利用多核 CPU 的优势，反而可能因为线程切换的开销而导致性能下降。
+multiprocessing：每个进程都有自己独立的 Python 解释器和 GIL，因此可以充分利用多核 CPU 的优势，在 CPU 密集型任务中表现更好。
+
+- 数据共享和通信
+
+    threading：线程之间共享同一进程的内存空间，因此可以直接访问和修改共享数据。但这种共享也带来了线程安全问题，需要使用锁机制（如threading.Lock、threading.RLock等）来保证数据的一致性。
+multiprocessing：进程之间的数据是相互隔离的，不能直接共享数据。需要使用特定的进程间通信（IPC）机制，如管道（multiprocessing.Pipe）、队列（multiprocessing.Queue）、共享内存（multiprocessing.Value、multiprocessing.Array）等来实现数据的交换和共享。
+
+- 适用场景
+
+    threading：适用于 I/O 密集型任务，如网络请求、文件读写等。在这些任务中，线程在等待 I/O 操作完成时会释放 GIL，让其他线程有机会执行，从而提高程序的整体性能。
+multiprocessing：适用于 CPU 密集型任务，如科学计算、图像处理等。通过使用多个进程，可以充分利用多核 CPU 的计算能力，提高程序的执行效率。
+
+
+Demo对比情况：
+```python
+import multiprocessing
+import time
+import threading
+
+# 定义一个 CPU 密集型函数，计算斐波那契数列
+def fibonacci(n):
+    if n <= 1:
+        return n
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
+
+# 定义一个普通函数来打印结果
+def print_fibonacci_result(num):
+    result = fibonacci(num)
+    print(f"Fibonacci({num}) = {result}")
+
+
+# 多进程方式。多进程会多次运行代码，这种写法是避免每个进程都运行一次代码
+if __name__ == '__main__':
+    # 要计算的斐波那契数列的项数
+    numbers = [35, 35, 35]
+
+    # ============单进程方式================
+    start_time_single = time.time()
+    for num in numbers:
+        result = fibonacci(num)
+        print(f"Fibonacci({num}) = {result}")
+    end_time_single = time.time()
+    print(f"Single-process execution time: {end_time_single - start_time_single} seconds")
+
+
+    # =============多线程方式===============
+    start_time_multi_thread = time.time()
+    threads = []
+    for num in numbers:
+        thread = threading.Thread(target=print_fibonacci_result, args=(num,))
+        threads.append(thread)
+        thread.start()
+
+    # 等待所有线程执行完毕
+    for thread in threads:
+        thread.join()
+
+    end_time_multi_thread = time.time()
+    print(f"Multi - threaded execution time: {end_time_multi_thread - start_time_multi_thread} seconds")
+
+    # =============多进程方式===============
+    start_time_multi = time.time()
+    processes = []
+    for num in numbers:
+        process = multiprocessing.Process(target=print_fibonacci_result, args=(num,))
+        processes.append(process)
+        process.start()
+
+    # 等待所有进程执行完毕
+    for process in processes:
+        process.join()
+
+    end_time_multi = time.time()
+    print(f"Multi-process execution time: {end_time_multi - start_time_multi} seconds")
+```
+运行结果：可以看出多线程没有明显提升整体速度
+    
+    Fibonacci(35) = 9227465
+    Fibonacci(35) = 9227465
+    Fibonacci(35) = 9227465
+    Single-process execution time: 8.550055027008057 seconds
+    Fibonacci(35) = 9227465
+    Fibonacci(35) = 9227465
+    Fibonacci(35) = 9227465
+    Multi - threaded execution time: 8.086357593536377 seconds
+    Fibonacci(35) = 9227465
+    Fibonacci(35) = 9227465
+    Fibonacci(35) = 9227465
+    Multi-process execution time: 3.1431312561035156 seconds
+
+
+
+
 
 
 
