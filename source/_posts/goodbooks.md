@@ -38,13 +38,13 @@ date: 2025-2-9
 
 ---
 
-### [2.Google Agents](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
+### [3.Google智能体白皮书](http://xhrong.github.io/attachments/books/Google智能体白皮书.pdf)
 
-   📅 2025-02-22 | 🏷️ LLM  
+   📅 2025-03-15 | 🏷️ LLM  
 
-   [<img src="http://xhrong.github.io/attachments/books/大模型基础（完整版）.jpg" alt="封面图片" style="height:300px;" />](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
+   [<img src="http://xhrong.github.io/attachments/books/Google智能体白皮书.jpg" alt="封面图片" style="height:300px;" />](http://xhrong.github.io/attachments/books/Google智能体白皮书.pdf)
 
-   ▶️ 简介：大模型基础知识介绍，中文
+   ▶️ 简介：Google智能体白皮书,智能体入门介绍
 
 ---
 
