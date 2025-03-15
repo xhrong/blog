@@ -38,6 +38,17 @@ date: 2026-2-9
 
 ---
 
+### [2.Google Agents](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
+
+   📅 2025-02-22 | 🏷️ LLM  
+
+   [<img src="http://xhrong.github.io/attachments/books/大模型基础（完整版）.jpg" alt="封面图片" style="height:300px;" />](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
+
+   ▶️ 简介：大模型基础知识介绍，中文
+
+---
+
+
 ## Education
 
 ### [1.Design For How People Learn](http://xhrong.github.io/attachments/books/Design-For-How-People-Learn.pdf)
