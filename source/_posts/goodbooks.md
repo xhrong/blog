@@ -6,11 +6,11 @@ categories: [读书]
 date: 2025-2-9
 ---
 
-# Good Books
+## Good Books
 
-## Computer
+### Computer
 
-### [1.LLM Engineer’s Handbook: Master the art of engineering large language models from concept to production](http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.pdf)
+#### [1.LLM Engineer’s Handbook: Master the art of engineering large language models from concept to production](http://xhrong.github.io/attachments/books/llm-engineers-handbook-engineering-production.pdf)
  
    📅 2025-02-22 | 🏷️ LLM  
 
@@ -28,7 +28,7 @@ date: 2025-2-9
 
 ---
 
-### [2.大模型基础](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
+#### [2.大模型基础](http://xhrong.github.io/attachments/books/大模型基础（完整版）.pdf)
 
    📅 2025-02-22 | 🏷️ LLM  
 
@@ -38,7 +38,7 @@ date: 2025-2-9
 
 ---
 
-### [3.Google智能体白皮书](http://xhrong.github.io/attachments/books/Google智能体白皮书.pdf)
+#### [3.Google智能体白皮书](http://xhrong.github.io/attachments/books/Google智能体白皮书.pdf)
 
    📅 2025-03-15 | 🏷️ LLM  
 
@@ -49,9 +49,22 @@ date: 2025-2-9
 ---
 
 
-## Education
+#### [4.OpenAI_GPT：Prompt最佳实践中文大白话版本](http://xhrong.github.io/attachments/books/OpenAI_GPT：Prompt最佳实践中文大白话版本.pdf)
 
-### [1.Design For How People Learn](http://xhrong.github.io/attachments/books/Design-For-How-People-Learn.pdf)
+   📅 2025-03-15 | 🏷️ LLM  
+
+   [<img src="http://xhrong.github.io/attachments/books/OpenAI_GPT：Prompt最佳实践中文大白话版本.jpg" alt="封面图片" style="height:300px;" />](http://xhrong.github.io/attachments/books/OpenAI_GPT：Prompt最佳实践中文大白话版本.pdf)
+
+   ▶️ 简介：OpenAI：GPT Prompt最佳实践中文大白话版本
+
+---
+
+
+
+
+### Education
+
+#### [1.Design For How People Learn](http://xhrong.github.io/attachments/books/Design-For-How-People-Learn.pdf)
 
    📅 2025-02-22 | 🏷️ 教学设计  
 
